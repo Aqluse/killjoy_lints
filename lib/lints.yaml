@@ -1,0 +1,1205 @@
+# Last updated with Dart SDK v. 3.6.1
+
+# All linter rules:
+# https://github.com/dart-lang/sdk/blob/main/pkg/linter/example/all.yaml
+# https://github.com/dart-lang/sdk/blob/main/pkg/linter/lib/src/rules.dart
+# Do not forget to choose latest version tag!
+# Lints description:
+# https://dart.dev/tools/linter-rules
+
+# Keywords of analysis_options.yaml:
+# https://github.com/dart-lang/sdk/blob/main/pkg/analyzer/lib/src/task/options.dart#L240 (AnalysisOptionsFile class)
+# Do not forget to choose latest version tag!
+# Latest readable version:
+# https://dart.dev/tools/analysis#the-analysis-options-file
+
+# Diagnostic messages list:
+# https://dart.dev/tools/diagnostic-messages
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    # Указывать папку генерируемых моделей на проекте отдельно, если применимо.
+    # - lib/**/*.g.dart
+
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+
+  errors:
+    # `LIBRARY_LINT` - lint is not suitable to use outside of library.
+
+    ### Diagnostic
+
+    # Add new rules to 'errors' section first,
+    # then put whole list of up-to-date diagnostics
+    # and remove diagnostics highlighted as duplicates.
+    
+    #abi_specific_integer_invalid: error warning info ignore
+    #abi_specific_integer_mapping_extra: error warning info ignore
+    #abi_specific_integer_mapping_missing: error warning info ignore
+    #abi_specific_integer_mapping_unsupported: error warning info ignore
+    ### Default is ok
+    #abstract_field_initializer: error warning info ignore
+    ### Default is ok
+    #abstract_sealed_class: error warning info ignore
+    ### Will lead to runtime error
+    abstract_super_member_reference: error
+    ambiguous_export: error
+    ambiguous_extension_member_access: error
+    ambiguous_import: error
+    ambiguous_set_or_map_literal_both: error
+    ambiguous_set_or_map_literal_either: error
+    ### Default is ok
+    #annotation_on_pointer_field: error warning info ignore
+    argument_must_be_a_constant: error
+    argument_must_be_native: error
+    argument_type_not_assignable: error
+    argument_type_not_assignable_to_error_handler: error
+    ### Default is ok
+    #assert_in_redirecting_constructor: error warning info ignore
+    asset_directory_does_not_exist: error
+    asset_does_not_exist: error
+    asset_field_not_list: error
+    asset_missing_path: error
+    asset_not_string: error
+    asset_not_string_or_map: error
+    asset_path_not_string: error
+    ### If necessary, can be ignored separately
+    assignment_of_do_not_store: error
+    ### Default is ok
+    #assignment_to_const: error warning info ignore
+    ### Default is ok
+    #assignment_to_final: error warning info ignore
+    ### Default is ok
+    #assignment_to_final_local: error warning info ignore
+    ### Default is ok
+    #assignment_to_final_no_setter: error warning info ignore
+    ### Default is ok
+    #assignment_to_function: error warning info ignore
+    ### Default is ok
+    #assignment_to_method: error warning info ignore
+    ### Default is ok
+    #assignment_to_type: error warning info ignore
+    ### Default is ok
+    #async_for_in_wrong_context: error warning info ignore
+    ### Default is ok
+    #await_in_late_local_variable_initializer: error warning info ignore
+    await_of_incompatible_type: error
+    body_might_complete_normally: error
+    body_might_complete_normally_catch_error: error
+    body_might_complete_normally_nullable: error
+    break_label_on_switch_member: error
+    built_in_identifier_as_type: error
+    built_in_identifier_in_declaration: error
+    case_block_not_terminated: error
+    # TODO: Not figured out what situation it tries to prevent
+    #case_expression_type_implements_equals: error warning info ignore
+    case_expression_type_is_not_switch_expression_subtype: error
+    cast_from_nullable_always_fails: error
+    cast_from_null_always_fails: error
+    cast_to_non_type: error
+    ### Default is ok
+    #class_used_as_mixin: error warning info ignore
+    collection_element_from_deferred_library: error
+    compound_implements_finalizable: error
+    ### Default is ok
+    #concrete_class_has_enum_superinterface: error warning info ignore
+    concrete_class_with_abstract_member: error
+    conflicting_constructor_and_static_member: error
+    ### Default is ok
+    #conflicting_generic_interfaces: error warning info ignore
+    conflicting_type_variable_and_container: error
+    conflicting_type_variable_and_member: error
+    constant_pattern_never_matches_value_type: error
+    constant_pattern_with_non_constant_expression: error
+    const_constructor_param_type_mismatch: error
+    const_constructor_with_field_initialized_by_non_const: error
+    const_constructor_with_non_const_super: error
+    const_constructor_with_non_final_field: error
+    const_deferred_class: error
+    const_initialized_with_non_constant_value: error
+    const_initialized_with_non_constant_value_from_deferred_library: error
+    ### Default is ok
+    #const_instance_field: error warning info ignore
+    const_map_key_not_primitive_equality: error
+    const_not_initialized: error
+    const_set_element_not_primitive_equality: error
+    const_spread_expected_list_or_set: error
+    const_spread_expected_map: error
+    ### Default is ok
+    #const_with_non_const: error warning info ignore
+    const_with_non_constant_argument: error
+    const_with_type_parameters: error
+    continue_label_invalid: error
+    creation_of_struct_or_union: error
+    creation_with_non_type: error
+    dead_code: warning
+    dead_code_catch_following_catch: warning
+    dead_code_on_catch_subtype: warning
+    dead_null_aware_expression: warning
+    ### Default is ok
+    #default_list_constructor: error warning info ignore
+    ### Default is ok
+    #default_value_in_function_type: error warning info ignore
+    ### Default is ok
+    #default_value_in_redirecting_factory_constructor: error warning info ignore
+    ### Default is ok
+    #default_value_on_required_parameter: error warning info ignore
+    ### Default is ok
+    #deferred_import_of_extension: error warning info ignore
+    definitely_unassigned_late_local_variable: error
+    dependencies_field_not_map: error
+    ### Default is ok
+    #deprecated_colon_for_default_value: error warning info ignore
+    ### Default is ok
+    #deprecated_export_use: error warning info ignore
+    ### Default is ok
+    #deprecated_field: error warning info ignore
+    ### Default is ok
+    #deprecated_member_use: error warning info ignore
+    ### Default is ok
+    #deprecated_new_in_comment_reference: error warning info ignore
+    ### Default is ok
+    #deprecated_subtype_of_function: error warning info ignore
+    ### Default is ok
+    #disallowed_type_instantiation_expression: error warning info ignore
+    division_optimization: warning
+    ### Default is ok
+    #duplicate_constructor: error warning info ignore
+    duplicate_definition: error
+    ### Default is ok
+    #duplicate_export: error warning info ignore
+    ### Default is ok
+    #duplicate_field_formal_parameter: error warning info ignore
+    duplicate_field_name: error
+    ### Default is ok
+    #duplicate_hidden_name: error warning info ignore
+    ### Default is ok
+    #duplicate_ignore: error warning info ignore
+    ### Default is ok
+    #duplicate_import: error warning info ignore
+    duplicate_named_argument: error
+    ### Default is ok
+    #duplicate_part: error warning info ignore
+    duplicate_pattern_assignment_variable: error
+    duplicate_pattern_field: error
+    ### Default is ok
+    #duplicate_rest_element_in_pattern: error warning info ignore
+    ### Default is ok
+    #duplicate_shown_name: error warning info ignore
+    duplicate_variable_pattern: error
+    ### Default is ok
+    #empty_map_pattern: error warning info ignore
+    empty_record_literal_with_comma: error
+    ### Default is ok
+    #empty_record_type_named_fields_list: error warning info ignore
+    empty_record_type_with_comma: error
+    ### Default is ok
+    #empty_struct: error warning info ignore
+    enum_constant_same_name_as_enclosing: error
+    ### Default is ok
+    #enum_constant_with_non_const_constructor: error warning info ignore
+    ### Default is ok
+    #enum_mixin_with_instance_variable: error warning info ignore
+    ### Default is ok
+    #enum_with_abstract_member: error warning info ignore
+    enum_with_name_values: error
+    equal_elements_in_const_set: warning
+    equal_elements_in_set: warning
+    equal_keys_in_const_map: error
+    equal_keys_in_map: error
+    equal_keys_in_map_pattern: error
+    expected_one_list_pattern_type_arguments: error
+    expected_one_list_type_arguments: error
+    expected_one_set_type_arguments: error
+    expected_two_map_pattern_type_arguments: error
+    expected_two_map_type_arguments: error
+    ### Default is ok
+    #export_internal_library: error warning info ignore
+    ### Default is ok
+    #export_legacy_symbol: error warning info ignore
+    ### Default is ok
+    #export_of_non_library: error warning info ignore
+    expression_in_map: error
+    extends_non_class: error
+    ### Default is ok
+    #extension_as_expression: error warning info ignore
+    extension_conflicting_static_and_instance: error
+    ### Default is ok
+    #extension_declares_abstract_member: error warning info ignore
+    ### Default is ok
+    #extension_declares_constructor: error warning info ignore
+    ### Default is ok
+    #extension_declares_instance_field: error warning info ignore
+    extension_declares_member_of_object: error
+    ### Default is ok
+    #extension_override_access_to_static_member: error warning info ignore
+    extension_override_argument_not_assignable: error
+    ### Default is ok
+    #extension_override_without_access: error warning info ignore
+    ### Default is ok
+    #extension_override_with_cascade: error warning info ignore
+    ### Default is ok
+    #extension_type_constructor_with_super_formal_parameter: error warning info ignore
+    ### Default is ok
+    #extension_type_constructor_with_super_invocation: error warning info ignore
+    ### Default is ok
+    #extension_type_declares_instance_field: error warning info ignore
+    ### Default is ok
+    #extension_type_declares_member_of_object: error warning info ignore
+    extension_type_implements_disallowed_type: error
+    extension_type_implements_itself: error
+    ### Default is ok
+    #extension_type_implements_not_supertype: error warning info ignore
+    ### Default is ok
+    #extension_type_implements_representation_not_supertype: error warning info ignore
+    ### Default is ok
+    #extension_type_inherited_member_conflict: error warning info ignore
+    extension_type_representation_depends_on_itself: error
+    ### Default is ok
+    #extension_type_representation_type_bottom: error warning info ignore
+    ### Default is ok
+    #extension_type_with_abstract_member: error warning info ignore
+    external_with_initializer: error
+    extra_annotation_on_struct_field: error
+    extra_positional_arguments: error
+    extra_positional_arguments_could_be_named: error
+    extra_size_annotation_carray: error
+    ffi_native_invalid_duplicate_default_asset: error
+    ffi_native_invalid_multiple_annotations: error
+    ffi_native_must_be_external: error
+    ffi_native_unexpected_number_of_parameters: error
+    ffi_native_unexpected_number_of_parameters_with_receiver: error
+    field_initialized_by_multiple_initializers: error
+    field_initialized_in_initializer_and_declaration: error
+    field_initialized_in_parameter_and_initializer: error
+    field_initializer_factory_constructor: error
+    ### Default is ok
+    #field_initializer_in_struct: error warning info ignore
+    field_initializer_not_assignable: error
+    ### Default is ok
+    #field_initializer_outside_constructor: error warning info ignore
+    field_initializer_redirecting_constructor: error
+    field_initializing_formal_not_assignable: error
+    ### Default is ok
+    #field_in_struct_with_initializer: error warning info ignore
+    ### Default is ok
+    #field_must_be_external_in_struct: error warning info ignore
+    final_initialized_in_declaration_and_constructor: error
+    final_not_initialized: error
+    final_not_initialized_constructor: error
+    flutter_field_not_map: error
+    for_in_of_invalid_element_type: error
+    for_in_of_invalid_type: error
+    for_in_with_const_variable: error
+    # TODO: Not figured out
+    #generic_method_type_instantiation_on_dynamic: error warning info ignore
+    ### Default is ok
+    #generic_struct_subclass: error warning info ignore
+    ### Default is ok
+    #getter_not_subtype_setter_types: error warning info ignore
+    illegal_async_generator_return_type: error
+    illegal_async_return_type: error
+    illegal_concrete_enum_member: error
+    illegal_enum_values: error
+    illegal_sync_generator_return_type: error
+    implements_non_class: error
+    implements_repeated: warning
+    ### Default is ok
+    #implements_super_class: error warning info ignore
+    implicit_super_initializer_missing_arguments: error
+    implicit_this_reference_in_initializer: error
+    import_deferred_library_with_load_function: error
+    ### Default is ok
+    #import_internal_library: error warning info ignore
+    import_of_legacy_library_into_null_safe: error
+    import_of_non_library: error
+    inconsistent_inheritance: error
+    inconsistent_language_version_override: error
+    inconsistent_pattern_variable_logical_or: error
+    initializer_for_non_existent_field: error
+    initializer_for_static_field: error
+    initializing_formal_for_non_existent_field: error
+    instance_access_to_static_member: error
+    instance_member_access_from_factory: error
+    instance_member_access_from_static: error
+    ### Default is ok
+    #instantiate_abstract_class: error warning info ignore
+    ### Default is ok
+    #instantiate_enum: error warning info ignore
+    ### Default is ok
+    #instantiate_type_alias_expands_to_type_parameter: error warning info ignore
+    integer_literal_imprecise_as_double: error
+    integer_literal_out_of_range: error
+    ### Default is ok
+    #invalid_annotation: error warning info ignore
+    ### Default is ok
+    #invalid_annotation_constant_value_from_deferred_library: error warning info ignore
+    ### Default is ok
+    #invalid_annotation_from_deferred_library: error warning info ignore
+    invalid_annotation_target: error
+    invalid_assignment: error
+    invalid_dependency: error
+    ### Default is ok
+    #invalid_exception_value: error warning info ignore
+    invalid_export_of_internal_element: error
+    invalid_export_of_internal_element_indirectly: error
+    invalid_extension_argument_count: error
+    invalid_factory_method_decl: error
+    ### Default is ok
+    #invalid_factory_method_impl: error warning info ignore
+    invalid_factory_name_not_a_class: error
+    invalid_field_name: error
+    invalid_field_type_in_struct: error
+    invalid_implementation_override: error
+    invalid_inline_function_type: error
+    ### Default is ok
+    #invalid_internal_annotation: error warning info ignore
+    invalid_language_version_override: error
+    ### Default is ok
+    #invalid_literal_annotation: error warning info ignore
+    invalid_modifier_on_constructor: error
+    invalid_modifier_on_setter: error
+    ### Default is ok
+    #invalid_non_virtual_annotation: error warning info ignore
+    ### Default is ok
+    #invalid_null_aware_operator: error warning info ignore
+    invalid_override: error
+    invalid_override_of_non_virtual_member: error
+    invalid_pattern_variable_in_shared_case_scope: error
+    invalid_platforms_field: error
+    ### Default is ok
+    #invalid_reference_to_generative_enum_constructor: error warning info ignore
+    invalid_reference_to_this: error
+    invalid_return_type_for_catch_error: error
+    invalid_sealed_annotation: error
+    invalid_super_formal_parameter_location: error
+    ### Default is ok
+    #invalid_type_argument_in_const_literal: error warning info ignore
+    invalid_uri: error
+    ### Default is ok
+    #invalid_use_of_covariant_in_extension: error warning info ignore
+    invalid_use_of_internal_member: warning
+    invalid_use_of_null_value: error
+    invalid_use_of_type_outside_library: warning
+    invalid_use_of_visible_for_overriding_member: warning
+    invalid_use_of_visible_for_testing_member: warning
+    invalid_visibility_annotation: warning
+    invalid_visible_for_overriding_annotation: error
+    invalid_visible_outside_template_annotation: error
+    invocation_of_extension_without_call: error
+    ### Default is ok
+    #invocation_of_non_function: error warning info ignore
+    invocation_of_non_function_expression: error
+    label_in_outer_scope: error
+    label_undefined: error
+    ### Default is ok
+    #late_final_field_with_const_constructor: error warning info ignore
+    late_final_local_already_assigned: error
+    #leaf_call_must_not_return_handle: error warning info ignore
+    #leaf_call_must_not_take_handle: error warning info ignore
+    list_element_type_not_assignable: error
+    main_first_positional_parameter_type: error
+    main_has_required_named_parameters: error
+    ### Default is ok
+    #main_has_too_many_required_positional_parameters: error warning info ignore
+    ### Default is ok
+    #main_is_not_function: error warning info ignore
+    map_entry_not_in_map: error
+    map_key_type_not_assignable: error
+    map_value_type_not_assignable: error
+    mismatched_annotation_on_struct_field: error
+    missing_annotation_on_struct_field: error
+    missing_dart_library: error
+    missing_default_value_for_parameter: error
+    missing_dependency: error
+    missing_enum_constant_in_switch: error
+    missing_exception_value: error
+    missing_field_type_in_struct: error
+    missing_name: error
+    missing_named_pattern_field_name: error
+    missing_override_of_must_be_overridden: warning
+    missing_required_argument: error
+    missing_required_param: error
+    missing_return: error
+    missing_size_annotation_carray: error
+    missing_variable_pattern: error
+    mixin_application_concrete_super_invoked_member_type: error
+    mixin_application_not_implemented_interface: error
+    mixin_application_no_concrete_super_invoked_member: error
+    ### Default is ok
+    #mixin_class_declaration_extends_not_object: error warning info ignore
+    ### Default is ok
+    #mixin_class_declares_constructor: error warning info ignore
+    ### Default is ok
+    #mixin_inherits_from_not_object: error warning info ignore
+    mixin_instantiate: error
+    ### Default is ok
+    #mixin_of_non_class: error warning info ignore
+    ### Default is ok
+    #mixin_on_sealed_class: error warning info ignore
+    ### Default is ok
+    #mixin_super_class_constraint_deferred_class: error warning info ignore
+    ### Default is ok
+    #mixin_super_class_constraint_non_interface: error warning info ignore
+    multiple_redirecting_constructor_invocations: error
+    multiple_super_initializers: error
+    must_be_a_native_function_type: error
+    must_be_a_subtype: error
+    must_be_immutable: error
+    must_call_super: error
+    ### Default is ok
+    #must_return_void: error warning info ignore
+    name_not_string: error
+    #native_field_invalid_type: error warning info ignore
+    native_field_missing_type: error
+    ### Default is ok
+    #native_field_not_static: error warning info ignore
+    native_function_missing_type: error
+    #negative_variable_dimension: error warning info ignore
+    new_with_undefined_constructor_default: error
+    non_abstract_class_inherits_abstract_member: error
+    non_bool_condition: error
+    non_bool_expression: error
+    non_bool_negation_expression: error
+    non_bool_operand: error
+    non_constant_annotation_constructor: error
+    ### Default is ok
+    #non_constant_case_expression: error warning info ignore
+    ### Default is ok
+    #non_constant_case_expression_from_deferred_library: error warning info ignore
+    ### Default is ok
+    #non_constant_default_value: error warning info ignore
+    ### Default is ok
+    #non_constant_default_value_from_deferred_library: error warning info ignore
+    non_constant_list_element: error
+    non_constant_map_element: error
+    non_constant_map_key: error
+    ### Default is ok
+    #non_constant_map_pattern_key: error warning info ignore
+    non_constant_map_value: error
+    ### Default is ok
+    #non_constant_relational_pattern_expression: error warning info ignore
+    non_constant_set_element: error
+    non_constant_type_argument: error
+    non_const_argument_for_const_parameter: error
+    non_const_call_to_literal_constructor: warning
+    ### Default is ok
+    #non_const_generative_enum_constructor: error warning info ignore
+    # TODO: Not figured out what situation it tries to prevent
+    #non_covariant_type_parameter_position_in_representation_type: error warning info ignore
+    non_exhaustive_switch_expression: error
+    non_exhaustive_switch_statement: error
+    non_final_field_in_enum: error
+    non_generative_constructor: error
+    non_generative_implicit_constructor: error
+    non_native_function_type_argument_to_pointer: error
+    non_positive_array_dimension: error
+    non_sized_type_argument: error
+    ### Default is ok
+    #non_sync_factory: error warning info ignore
+    non_type_as_type_argument: error
+    non_type_in_catch_clause: error
+    non_void_return_for_operator: error
+    non_void_return_for_setter: error
+    not_assigned_potentially_non_nullable_local_variable: error
+    not_a_type: error
+    not_binary_operator: error
+    not_enough_positional_arguments: error
+    not_initialized_non_nullable_instance_field: error
+    not_initialized_non_nullable_variable: error
+    not_iterable_spread: error
+    not_map_spread: error
+    no_annotation_constructor_arguments: error
+    no_combined_super_signature: error
+    no_generative_constructors_in_superclass: error
+    nullable_type_in_catch_clause: error
+    nullable_type_in_extends_clause: error
+    nullable_type_in_implements_clause: error
+    nullable_type_in_on_clause: error
+    nullable_type_in_with_clause: error
+    null_argument_to_non_null_type: error
+    null_check_always_fails: error
+    obsolete_colon_for_default_value: warning
+    on_repeated: error
+    ### Default is ok
+    #optional_parameter_in_operator: error warning info ignore
+    override_on_non_overriding_member: warning
+    packed_annotation: error
+    packed_annotation_alignment: error
+    part_of_different_library: error
+    part_of_non_part: error
+    part_of_unnamed_library: error
+    path_does_not_exist: error
+    path_not_posix: error
+    path_pubspec_does_not_exist: error
+    pattern_assignment_not_local_variable: error
+    ### Default is ok
+    #pattern_constant_from_deferred_library: error warning info ignore
+    pattern_type_mismatch_in_irrefutable_context: error
+    pattern_variable_assignment_inside_guard: error
+    platform_value_disallowed: error
+    ### Default is ok
+    #positional_field_in_object_pattern: error warning info ignore
+    ### Default is ok
+    #positional_super_formal_parameter_with_positional_argument: error warning info ignore
+    prefix_collides_with_top_level_member: error
+    prefix_identifier_not_followed_by_dot: error
+    prefix_shadowed_by_local_declaration: error
+    private_collision_in_mixin_application: error
+    private_optional_parameter: error
+    private_setter: error
+    read_potentially_unassigned_final: error
+    record_literal_one_positional_no_trailing_comma: error
+    record_type_one_positional_no_trailing_comma: error
+    recursive_compile_time_constant: error
+    recursive_constructor_redirect: error
+    recursive_interface_inheritance: error
+    redeclare_on_non_redeclaring_member: error
+    redirect_generative_to_missing_constructor: error
+    redirect_generative_to_non_generative_constructor: error
+    redirect_to_abstract_class_constructor: error
+    redirect_to_invalid_function_type: error
+    redirect_to_invalid_return_type: error
+    redirect_to_missing_constructor: error
+    redirect_to_non_class: error
+    redirect_to_non_const_constructor: error
+    redirect_to_type_alias_expands_to_type_parameter: error
+    referenced_before_declaration: error
+    # TODO: Not figured out what situation it tries to prevent
+    #refutable_pattern_in_irrefutable_context: error warning info ignore
+    relational_pattern_operand_type_not_assignable: error
+    relational_pattern_operator_return_type_not_assignable_to_bool: error
+    ### Default is ok
+    #rest_element_in_map_pattern: error warning info ignore
+    rethrow_outside_catch: error
+    return_in_generative_constructor: error
+    return_in_generator: error
+    ### If necessary, can be ignored separately
+    return_of_do_not_store: error
+    return_of_invalid_type: error
+    return_of_invalid_type_from_closure: error
+    return_without_value: error
+    sdk_version_async_exported_from_core: error
+    sdk_version_as_expression_in_const_context: error
+    sdk_version_bool_operator_in_const_context: error
+    sdk_version_constructor_tearoffs: error
+    sdk_version_eq_eq_operator_in_const_context: error
+    sdk_version_extension_methods: error
+    sdk_version_gt_gt_gt_operator: error
+    sdk_version_is_expression_in_const_context: error
+    sdk_version_never: error
+    sdk_version_set_literal: error
+    sdk_version_ui_as_code: error
+    sdk_version_ui_as_code_in_const_context: error
+    set_element_type_not_assignable: error
+    shared_deferred_prefix: error
+    size_annotation_dimensions: error
+    static_access_to_instance_member: error
+    subtype_of_base_or_final_is_not_base_final_or_sealed: error
+    ### Default is ok
+    #subtype_of_deferred_class: error warning info ignore
+    ### Default is ok
+    #subtype_of_disallowed_type: error warning info ignore
+    ### Default is ok
+    #subtype_of_ffi_class: error warning info ignore
+    subtype_of_sealed_class: error
+    subtype_of_struct_class: error
+    supertype_expands_to_type_parameter: error
+    super_formal_parameter_type_is_not_subtype_of_associated: error
+    super_formal_parameter_without_associated_named: error
+    super_formal_parameter_without_associated_positional: error
+    super_invocation_not_last: error
+    super_in_enum_constructor: error
+    super_in_extension: error
+    super_in_extension_type: error
+    super_in_invalid_context: error
+    super_in_redirecting_constructor: error
+    switch_case_completes_normally: error
+    switch_expression_not_assignable: error
+    tearoff_of_generative_constructor_of_abstract_class: error
+    text_direction_code_point_in_comment: error
+    text_direction_code_point_in_literal: error
+    throw_of_invalid_type: error
+    top_level_cycle: error
+    type_alias_cannot_reference_itself: error
+    ### Default is ok
+    #type_annotation_deferred_class: error warning info ignore
+    type_argument_not_matching_bounds: error
+    type_check_with_null: error
+    type_parameter_referenced_by_static: error
+    type_parameter_supertype_of_its_bound: error
+    type_test_with_non_type: error
+    type_test_with_undefined_name: error
+    unchecked_use_of_nullable_value: error
+    undefined_annotation: error
+    undefined_class: error
+    undefined_constructor_in_initializer: error
+    undefined_enum_constant: error
+    undefined_enum_constructor: error
+    undefined_extension_getter: error
+    undefined_extension_method: error
+    undefined_extension_operator: error
+    undefined_extension_setter: error
+    undefined_function: error
+    undefined_getter: error
+    undefined_hidden_name: error
+    undefined_identifier: error
+    undefined_identifier_await: error
+    undefined_method: error
+    undefined_named_parameter: error
+    undefined_operator: error
+    undefined_prefixed_name: error
+    undefined_referenced_parameter: error
+    undefined_setter: error
+    undefined_shown_name: error
+    undefined_super_member: error
+    unknown_platform: error
+    unnecessary_cast: warning
+    unnecessary_dev_dependency: error
+    ### Default is ok
+    #unnecessary_import: error warning info ignore
+    unnecessary_nan_comparison: error
+    ### Default is ok
+    #unnecessary_non_null_assertion: error warning info ignore
+    ### Default is ok
+    #unnecessary_no_such_method: error warning info ignore
+    ### Default is ok
+    #unnecessary_null_assert_pattern: error warning info ignore
+    ### Default is ok
+    #unnecessary_null_check_pattern: error warning info ignore
+    ### Default is ok
+    #unnecessary_null_comparison: error warning info ignore
+    ### Default is ok
+    #unnecessary_question_mark: error warning info ignore
+    ### Default is ok
+    #unnecessary_set_literal: error warning info ignore
+    ### Default is ok
+    #unnecessary_type_check: error warning info ignore
+    unqualified_reference_to_non_local_static_member: error
+    unqualified_reference_to_static_member_of_extended_type: error
+    unreachable_switch_case: warning
+    unreachable_switch_default: warning
+    unused_catch_clause: warning
+    unused_catch_stack: ignore
+    ### Default is ok
+    #unused_element: error warning info ignore
+    ### Default is ok
+    #unused_element_parameter: error warning info ignore
+    ### Default is ok
+    #unused_field: error warning info ignore
+    ### Default is ok
+    #unused_import: error warning info ignore
+    ### Default is ok
+    #unused_label: error warning info ignore
+    ### Default is ok
+    #unused_local_variable: error warning info ignore
+    ### Default is ok
+    #unused_result: error warning info ignore
+    ### Default is ok
+    #unused_shown_name: error warning info ignore
+    uri_does_not_exist: error
+    uri_does_not_exist_in_doc_import: error
+    uri_has_not_been_generated: error
+    uri_with_interpolation: error
+    # TODO: Not figured out
+    #use_of_native_extension: error warning info ignore
+    use_of_void_result: error
+    values_declaration_in_enum: error
+    ### Default is ok
+    #variable_length_array_not_last: error warning info ignore
+    ### Default is ok
+    #variable_pattern_keyword_in_declaration_context: error warning info ignore
+    variable_type_mismatch: error
+    workspace_field_not_list: error
+    workspace_value_not_string: error
+    workspace_value_not_subdirectory: error
+    ### Default is ok
+    #wrong_number_of_parameters_for_operator: error warning info ignore
+    ### Default is ok
+    #wrong_number_of_parameters_for_setter: error warning info ignore
+    wrong_number_of_type_arguments: error
+    wrong_number_of_type_arguments_constructor: error
+    wrong_number_of_type_arguments_enum: error
+    wrong_number_of_type_arguments_extension: error
+    wrong_number_of_type_arguments_method: error
+    yield_in_non_generator: error
+    yield_of_invalid_type: error
+    ### Default is ok
+    #invalid_use_of_do_not_submit_member: error warning info ignore
+    prefer_for_elements_to_map_fromiterable: ignore
+    prefer_iterable_wheretype: info
+    unnecessary_underscores: info
+    # TODO: Not figured out what situation it tries to prevent
+    #unsafe_variance: error warning info ignore
+    
+    ### Rules
+    
+    always_declare_return_types: error
+    always_put_control_body_on_new_line: warning
+    always_put_required_named_parameters_first: ignore
+    always_specify_types: ignore
+    always_use_package_imports: ignore
+    annotate_overrides: error
+    annotate_redeclares: error
+    avoid_annotating_with_dynamic: warning
+    avoid_bool_literals_in_conditional_expressions: info
+    avoid_catches_without_on_clauses: error
+    avoid_catching_errors: error
+    avoid_classes_with_only_static_members: ignore
+    avoid_double_and_int_checks: error
+    avoid_dynamic_calls: error
+    avoid_empty_else: error
+    avoid_equals_and_hash_code_on_mutable_classes: error
+    avoid_escaping_inner_quotes: info
+    avoid_field_initializers_in_const_classes: info
+    avoid_final_parameters: ignore
+    avoid_function_literals_in_foreach_calls: warning
+    avoid_futureor_void: error
+    avoid_implementing_value_types: error
+    avoid_init_to_null: warning
+    avoid_js_rounded_ints: error
+    avoid_multiple_declarations_per_line: ignore
+    avoid_null_checks_in_equality_operators: warning
+    avoid_positional_boolean_parameters: error
+    avoid_print: error
+    avoid_private_typedef_functions: ignore
+    avoid_redundant_argument_values: ignore
+    avoid_relative_lib_imports: error
+    avoid_renaming_method_parameters: error
+    avoid_return_types_on_setters: error
+    avoid_returning_null_for_void: error
+    avoid_returning_this: error
+    avoid_setters_without_getters: error
+    avoid_shadowing_type_parameters: error
+    avoid_single_cascade_in_expression_statements: info
+    avoid_slow_async_io: error
+    avoid_type_to_string: error
+    avoid_types_as_parameter_names: error
+    avoid_types_on_closure_parameters: warning
+    avoid_unnecessary_containers: error
+    avoid_unused_constructor_parameters: ignore
+    avoid_void_async: error
+    avoid_web_libraries_in_flutter: error
+    await_only_futures: error
+    camel_case_extensions: error
+    camel_case_types: error
+    cancel_subscriptions: error
+    cascade_invocations: warning
+    cast_nullable_to_non_nullable: error
+    close_sinks: error
+    collection_methods_unrelated_type: error
+    combinators_ordering: error
+    comment_references: ignore
+    conditional_uri_does_not_exist: error
+    constant_identifier_names: error
+    control_flow_in_finally: error
+    curly_braces_in_flow_control_structures: error
+    dangling_library_doc_comments: ignore
+    depend_on_referenced_packages: error
+    deprecated_consistency: error
+    deprecated_member_use_from_same_package: warning
+    # Warns even if has no `debugFillProperties` at all.
+    # LIBRARY_LINT
+    diagnostic_describe_all_properties: warning
+    directives_ordering: info
+    discarded_futures: error
+    do_not_use_environment: error
+    document_ignores: info
+    empty_catches: error
+    empty_constructor_bodies: warning
+    empty_statements: error
+    # TODO: Not figured out what situation it tries to prevent
+    eol_at_end_of_file: ignore
+    exhaustive_cases: error
+    file_names: error
+    flutter_style_todos: info
+    hash_and_equals: error
+    implementation_imports: error
+    implicit_call_tearoffs: ignore
+    # In case you really need to extend some restricted class,
+    # but it also makes it less restricted for usage in the same library.
+    implicit_reopen: error
+    invalid_case_patterns: error
+    invalid_runtime_check_with_js_interop_types: error
+    join_return_with_assignment: info
+    leading_newlines_in_multiline_strings: info
+    library_annotations: error
+    library_names: error
+    library_prefixes: error
+    library_private_types_in_public_api: error
+    lines_longer_than_80_chars: info
+    literal_only_boolean_expressions: error
+    matching_super_parameters: error
+    missing_code_block_language_in_doc_comment: info
+    missing_whitespace_between_adjacent_strings: warning
+    no_adjacent_strings_in_list: error
+    no_default_cases: error
+    no_duplicate_case_values: error
+    no_leading_underscores_for_library_prefixes: error
+    no_leading_underscores_for_local_identifiers: error
+    no_literal_bool_comparisons: warning
+    no_logic_in_create_state: error
+    no_runtimeType_toString: error
+    no_self_assignments: error
+    no_wildcard_variable_uses: error
+    non_constant_identifier_names: error
+    noop_primitive_operations: warning
+    null_check_on_nullable_type_parameter: error
+    null_closures: error
+    omit_local_variable_types: ignore
+    omit_obvious_local_variable_types: ignore
+    one_member_abstracts: error
+    only_throw_errors: error
+    overridden_fields: error
+    package_api_docs: ignore
+    package_names: error
+    package_prefixed_library_names: error
+    parameter_assignments: error
+    prefer_adjacent_string_concatenation: warning
+    prefer_asserts_in_initializer_lists: warning
+    prefer_asserts_with_message: info
+    prefer_collection_literals: info
+    prefer_conditional_assignment: warning
+    prefer_const_constructors: warning
+    prefer_const_constructors_in_immutables: error
+    prefer_const_declarations: warning
+    prefer_const_literals_to_create_immutables: warning
+    prefer_constructors_over_static_methods: error
+    prefer_contains: warning
+    prefer_double_quotes: ignore
+    prefer_expression_function_bodies: ignore
+    prefer_final_fields: error
+    prefer_final_in_for_each: error
+    prefer_final_locals: error
+    prefer_final_parameters: error
+    prefer_for_elements_to_map_fromIterable: info
+    prefer_foreach: warning
+    prefer_function_declarations_over_variables: info
+    prefer_generic_function_type_aliases: error
+    prefer_if_elements_to_conditional_expressions: warning
+    prefer_if_null_operators: warning
+    prefer_initializing_formals: warning
+    prefer_inlined_adds: warning
+    prefer_int_literals: info
+    prefer_interpolation_to_compose_strings: warning
+    prefer_is_empty: info
+    prefer_is_not_empty: info
+    prefer_is_not_operator: warning
+    prefer_iterable_whereType: warning
+    prefer_mixin: error
+    prefer_null_aware_method_calls: warning
+    prefer_null_aware_operators: warning
+    prefer_relative_imports: ignore
+    prefer_single_quotes: info
+    prefer_spread_collections: warning
+    prefer_typing_uninitialized_variables: error
+    prefer_void_to_null: error
+    provide_deprecation_message: error
+    public_member_api_docs: ignore
+    recursive_getters: error
+    require_trailing_commas: info
+    secure_pubspec_urls: error
+    sized_box_for_whitespace: error
+    sized_box_shrink_expand: warning
+    slash_for_doc_comments: warning
+    sort_child_properties_last: warning
+    sort_constructors_first: warning
+    sort_pub_dependencies: ignore
+    sort_unnamed_constructors_first: warning
+    specify_nonobvious_local_variable_types: ignore
+    test_types_in_equals: error
+    throw_in_finally: error
+    tighten_type_of_initializing_formals: warning
+    type_annotate_public_apis: error
+    type_init_formals: warning
+    type_literal_in_constant_pattern: error
+    unawaited_futures: error
+    unintended_html_in_doc_comment: warning
+    unnecessary_await_in_return: warning
+    unnecessary_brace_in_string_interps: info
+    unnecessary_breaks: warning
+    unnecessary_const: info
+    unnecessary_constructor_name: info
+    unnecessary_final: ignore
+    unnecessary_getters_setters: warning
+    unnecessary_lambdas: info
+    unnecessary_late: warning
+    unnecessary_library_directive: warning
+    unnecessary_library_name: warning
+    unnecessary_new: warning
+    unnecessary_null_aware_assignments: warning
+    unnecessary_null_aware_operator_on_extension_on_nullable: warning
+    unnecessary_null_checks: error
+    unnecessary_null_in_if_null_operators: warning
+    unnecessary_nullable_for_final_variable_declarations: warning
+    unnecessary_overrides: warning
+    unnecessary_parenthesis: info
+    unnecessary_raw_strings: info
+    unnecessary_statements: warning
+    unnecessary_string_escapes: warning
+    unnecessary_string_interpolations: info
+    unnecessary_this: info
+    unnecessary_to_list_in_spreads: warning
+    unreachable_from_main: error
+    unrelated_type_equality_checks: error
+    unsafe_html: error
+    use_build_context_synchronously: error
+    use_colored_box: error
+    use_decorated_box: error
+    use_enums: warning
+    use_full_hex_values_for_flutter_colors: info
+    use_function_type_syntax_for_parameters: error
+    use_if_null_to_convert_nulls_to_bools: warning
+    use_is_even_rather_than_modulo: warning
+    use_key_in_widget_constructors: error
+    use_late_for_private_fields_and_variables: warning
+    use_named_constants: warning
+    use_raw_strings: warning
+    use_rethrow_when_possible: error
+    use_setters_to_change_properties: warning
+    use_string_buffers: warning
+    use_string_in_part_of_directives: error
+    use_super_parameters: ignore
+    # TODO: Not figured out
+    use_test_throws_matchers: ignore
+    use_to_and_as_if_applicable: warning
+    use_truncating_division: info
+    valid_regexps: error
+    void_checks: error
+
+linter:
+  rules:
+    # It's easier to just overwrite it.
+    # Diff can be used to find new rules for section above.
+
+    - always_declare_return_types
+    - always_put_control_body_on_new_line
+    - always_put_required_named_parameters_first
+    - always_specify_types
+    - always_use_package_imports
+    - annotate_overrides
+    - annotate_redeclares
+    - avoid_annotating_with_dynamic
+    - avoid_bool_literals_in_conditional_expressions
+    - avoid_catches_without_on_clauses
+    - avoid_catching_errors
+    - avoid_classes_with_only_static_members
+    - avoid_double_and_int_checks
+    - avoid_dynamic_calls
+    - avoid_empty_else
+    - avoid_equals_and_hash_code_on_mutable_classes
+    - avoid_escaping_inner_quotes
+    - avoid_field_initializers_in_const_classes
+    - avoid_final_parameters
+    - avoid_function_literals_in_foreach_calls
+    - avoid_futureor_void
+    - avoid_implementing_value_types
+    - avoid_init_to_null
+    - avoid_js_rounded_ints
+    - avoid_multiple_declarations_per_line
+    - avoid_null_checks_in_equality_operators
+    - avoid_positional_boolean_parameters
+    - avoid_print
+    - avoid_private_typedef_functions
+    - avoid_redundant_argument_values
+    - avoid_relative_lib_imports
+    - avoid_renaming_method_parameters
+    - avoid_return_types_on_setters
+    - avoid_returning_null_for_void
+    - avoid_returning_this
+    - avoid_setters_without_getters
+    - avoid_shadowing_type_parameters
+    - avoid_single_cascade_in_expression_statements
+    - avoid_slow_async_io
+    - avoid_type_to_string
+    - avoid_types_as_parameter_names
+    - avoid_types_on_closure_parameters
+    - avoid_unnecessary_containers
+    - avoid_unused_constructor_parameters
+    - avoid_void_async
+    - avoid_web_libraries_in_flutter
+    - await_only_futures
+    - camel_case_extensions
+    - camel_case_types
+    - cancel_subscriptions
+    - cascade_invocations
+    - cast_nullable_to_non_nullable
+    - close_sinks
+    - collection_methods_unrelated_type
+    - combinators_ordering
+    - comment_references
+    - conditional_uri_does_not_exist
+    - constant_identifier_names
+    - control_flow_in_finally
+    - curly_braces_in_flow_control_structures
+    - dangling_library_doc_comments
+    - depend_on_referenced_packages
+    - deprecated_consistency
+    - deprecated_member_use_from_same_package
+    - diagnostic_describe_all_properties
+    - directives_ordering
+    - discarded_futures
+    - do_not_use_environment
+    - document_ignores
+    - empty_catches
+    - empty_constructor_bodies
+    - empty_statements
+    - eol_at_end_of_file
+    - exhaustive_cases
+    - file_names
+    - flutter_style_todos
+    - hash_and_equals
+    - implementation_imports
+    - implicit_call_tearoffs
+    - implicit_reopen
+    - invalid_case_patterns
+    - invalid_runtime_check_with_js_interop_types
+    - join_return_with_assignment
+    - leading_newlines_in_multiline_strings
+    - library_annotations
+    - library_names
+    - library_prefixes
+    - library_private_types_in_public_api
+    - lines_longer_than_80_chars
+    - literal_only_boolean_expressions
+    - matching_super_parameters
+    - missing_code_block_language_in_doc_comment
+    - missing_whitespace_between_adjacent_strings
+    - no_adjacent_strings_in_list
+    - no_default_cases
+    - no_duplicate_case_values
+    - no_leading_underscores_for_library_prefixes
+    - no_leading_underscores_for_local_identifiers
+    - no_literal_bool_comparisons
+    - no_logic_in_create_state
+    - no_runtimeType_toString
+    - no_self_assignments
+    - no_wildcard_variable_uses
+    - non_constant_identifier_names
+    - noop_primitive_operations
+    - null_check_on_nullable_type_parameter
+    - null_closures
+    - omit_local_variable_types
+    - omit_obvious_local_variable_types
+    - one_member_abstracts
+    - only_throw_errors
+    - overridden_fields
+    - package_api_docs
+    - package_names
+    - package_prefixed_library_names
+    - parameter_assignments
+    - prefer_adjacent_string_concatenation
+    - prefer_asserts_in_initializer_lists
+    - prefer_asserts_with_message
+    - prefer_collection_literals
+    - prefer_conditional_assignment
+    - prefer_const_constructors
+    - prefer_const_constructors_in_immutables
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+    - prefer_constructors_over_static_methods
+    - prefer_contains
+    - prefer_double_quotes
+    - prefer_expression_function_bodies
+    - prefer_final_fields
+    - prefer_final_in_for_each
+    - prefer_final_locals
+    - prefer_final_parameters
+    - prefer_for_elements_to_map_fromIterable
+    - prefer_foreach
+    - prefer_function_declarations_over_variables
+    - prefer_generic_function_type_aliases
+    - prefer_if_elements_to_conditional_expressions
+    - prefer_if_null_operators
+    - prefer_initializing_formals
+    - prefer_inlined_adds
+    - prefer_int_literals
+    - prefer_interpolation_to_compose_strings
+    - prefer_is_empty
+    - prefer_is_not_empty
+    - prefer_is_not_operator
+    - prefer_iterable_whereType
+    - prefer_mixin
+    - prefer_null_aware_method_calls
+    - prefer_null_aware_operators
+    - prefer_relative_imports
+    - prefer_single_quotes
+    - prefer_spread_collections
+    - prefer_typing_uninitialized_variables
+    - prefer_void_to_null
+    - provide_deprecation_message
+    - public_member_api_docs
+    - recursive_getters
+    - require_trailing_commas
+    - secure_pubspec_urls
+    - sized_box_for_whitespace
+    - sized_box_shrink_expand
+    - slash_for_doc_comments
+    - sort_child_properties_last
+    - sort_constructors_first
+    - sort_pub_dependencies
+    - sort_unnamed_constructors_first
+    - specify_nonobvious_local_variable_types
+    - test_types_in_equals
+    - throw_in_finally
+    - tighten_type_of_initializing_formals
+    - type_annotate_public_apis
+    - type_init_formals
+    - type_literal_in_constant_pattern
+    - unawaited_futures
+    - unintended_html_in_doc_comment
+    - unnecessary_await_in_return
+    - unnecessary_brace_in_string_interps
+    - unnecessary_breaks
+    - unnecessary_const
+    - unnecessary_constructor_name
+    - unnecessary_final
+    - unnecessary_getters_setters
+    - unnecessary_lambdas
+    - unnecessary_late
+    - unnecessary_library_directive
+    - unnecessary_library_name
+    - unnecessary_new
+    - unnecessary_null_aware_assignments
+    - unnecessary_null_aware_operator_on_extension_on_nullable
+    - unnecessary_null_checks
+    - unnecessary_null_in_if_null_operators
+    - unnecessary_nullable_for_final_variable_declarations
+    - unnecessary_overrides
+    - unnecessary_parenthesis
+    - unnecessary_raw_strings
+    - unnecessary_statements
+    - unnecessary_string_escapes
+    - unnecessary_string_interpolations
+    - unnecessary_this
+    - unnecessary_to_list_in_spreads
+    - unreachable_from_main
+    - unrelated_type_equality_checks
+    - unsafe_html
+    - use_build_context_synchronously
+    - use_colored_box
+    - use_decorated_box
+    - use_enums
+    - use_full_hex_values_for_flutter_colors
+    - use_function_type_syntax_for_parameters
+    - use_if_null_to_convert_nulls_to_bools
+    - use_is_even_rather_than_modulo
+    - use_key_in_widget_constructors
+    - use_late_for_private_fields_and_variables
+    - use_named_constants
+    - use_raw_strings
+    - use_rethrow_when_possible
+    - use_setters_to_change_properties
+    - use_string_buffers
+    - use_string_in_part_of_directives
+    - use_super_parameters
+    - use_test_throws_matchers
+    - use_to_and_as_if_applicable
+    - use_truncating_division
+    - valid_regexps
+    - void_checks
